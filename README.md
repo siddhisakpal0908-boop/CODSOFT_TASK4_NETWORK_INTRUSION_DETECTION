@@ -1,18 +1,16 @@
 # Network Intrusion Detection System (NIDS) – VIOLET SHIELD
 
-## Internship
-
 **CodSoft Cyber Security Internship – Task 4**
 
 ## Project Overview
 
 VIOLET SHIELD is a Network Intrusion Detection System (NIDS) developed using Suricata, Python, and Streamlit.
 
-The project aims to monitor network activity, identify suspicious traffic patterns, and detect potential security threats using custom Suricata detection rules.
+The project monitors network activity, identifies suspicious traffic patterns, and detects potential security threats using custom Suricata detection rules.
 
-Suricata generates security events, which are stored in the `eve.json` log file. A Python-based Streamlit dashboard reads these events and presents security information through charts, metrics, and event tables.
+Suricata generates security events that are stored in the `eve.json` log file. A Python-based Streamlit dashboard reads these events and presents security information through charts, metrics, and event tables.
 
-The project provides practical experience in network monitoring, intrusion detection, security event analysis, and cybersecurity tools.
+This project provides practical experience in network monitoring, intrusion detection, security event analysis, and cybersecurity tools.
 
 ## Objectives
 
@@ -32,7 +30,7 @@ The project provides practical experience in network monitoring, intrusion detec
 | Streamlit | Interactive security dashboard |
 | Pandas | Data processing and analysis |
 | Plotly | Data visualisation and charts |
-| Windows | Development and monitoring environment |
+| Windows | Development environment |
 | Visual Studio Code | Code development and editing |
 | Npcap | Windows packet capture support |
 
@@ -42,16 +40,17 @@ The project provides practical experience in network monitoring, intrusion detec
 Uses Suricata to monitor network traffic and generate alerts based on configured detection rules.
 
 ### 2. Custom Detection Rules
-Includes rules for detecting:
+Includes custom rules for detecting:
 - ICMP ping activity.
 - TCP SYN packets matching the configured detection rule.
 - HTTP requests accessing the `/admin` path.
 
 ### 3. Security Dashboard
+
 The VIOLET SHIELD dashboard provides four main sections:
 
 - **Security Overview:** Displays total alerts, ICMP events, TCP SYN events, HTTP events, and unique source IP addresses.
-- **Threat Analytics:** Visualises alert distribution, attack patterns, and alert trends.
+- **Threat Analytics:** Visualises alert distribution, traffic patterns, and alert trends.
 - **Security Events:** Displays recorded alerts with timestamps, source IPs, destination IPs, protocols, and severity.
 - **Source IP Analysis:** Displays and analyses source IP addresses associated with detected alerts.
 
@@ -70,25 +69,22 @@ Allows users to reload the latest Suricata log data when required.
 TASK4_Network_Intrusion_Detection/
 │
 ├── dashboard.py
-│
 ├── rules/
 │   └── local.rules
-│
 ├── logs/
-│   ├── eve.json
-│   ├── fast.log
-│   └── response_report.txt
-│
+│   └── (Generated log files - excluded from GitHub)
 ├── response_action.py
-│
 ├── requirements.txt
-│
+├── test_data/
+│   ├── generate_test_pcap.py
+│   ├── http_admin_test.pcapng
+│   ├── http_test_server.py
+│   └── test_data.pcap
 ├── .gitignore
-│
 └── README.md
 ```
 
-*Note: Log files are generated during monitoring and may be excluded from the GitHub repository.*
+**Note:** Log files are generated during monitoring and are excluded from the GitHub repository through `.gitignore`.
 
 ## Installation and Setup
 
@@ -102,13 +98,13 @@ TASK4_Network_Intrusion_Detection/
 ### Step 1: Clone the Repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/siddhisakpal0908-boop/CODSOFT_TASK4_NETWORK_INTRUSION_DETECTION.git
 ```
 
 ### Step 2: Open the Project Folder
 
 ```bash
-cd TASK4_Network_Intrusion_Detection
+cd CODSOFT_TASK4_NETWORK_INTRUSION_DETECTION
 ```
 
 ### Step 3: Install Dependencies
@@ -121,7 +117,7 @@ pip install -r requirements.txt
 
 Install and configure Suricata for your network interface.
 
-Ensure that the Suricata configuration generates the `eve.json` file inside the project's `logs` directory.
+Ensure that Suricata is configured to generate the `eve.json` file in the project's `logs` directory.
 
 Configure the custom detection rules in:
 
@@ -157,13 +153,13 @@ The project uses custom Suricata rules to identify selected network traffic patt
 | TCP SYN Detection | Matches TCP SYN packets according to the configured rule. |
 | HTTP Sensitive Path Detection | Detects HTTP requests accessing the `/admin` path. |
 
-**Note:** A rule match indicates that traffic matched a configured detection pattern. It does not automatically confirm a malicious attack. TCP SYN alerts, for example, can also occur during normal network connections.
+**Important:** A rule match indicates that traffic matched a configured detection pattern. It does not automatically confirm a malicious attack. TCP SYN alerts, for example, can also occur during normal network connections.
 
 ## Project Outcome
 
-This project demonstrates the practical implementation of network intrusion detection using Suricata and Python.
+VIOLET SHIELD demonstrates the practical implementation of a Network Intrusion Detection System using Suricata and Python.
 
-It provides experience in configuring detection rules, analysing security logs, understanding network traffic, and developing a dashboard for security event monitoring.
+The project provides hands-on experience in configuring detection rules, analysing security logs, understanding network traffic, and developing a dashboard for security event monitoring.
 
 ## Limitations
 
@@ -180,6 +176,8 @@ It provides experience in configuring detection rules, analysing security logs, 
 M.Sc. Computer Science – Cyber Security
 
 **Internship:** CodSoft Cyber Security Internship
+
+**GitHub Repository:** [VIOLET SHIELD – Network Intrusion Detection System](https://github.com/siddhisakpal0908-boop/CODSOFT_TASK4_NETWORK_INTRUSION_DETECTION)
 
 ---
 
